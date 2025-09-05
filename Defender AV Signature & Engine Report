@@ -1,0 +1,71 @@
+// Title: Defender Antivirus Signature & Engine Currency Report
+// Description:
+// This query identifies Microsoft Defender AV clients with detailed info including:
+//  - Signature (Security Intelligence) version & staleness
+//  - Engine and Platform versions & currency
+//  - AV mode (Active, Passive, Audit, etc.)
+//  - Signature publish & refresh timestamps
+// Devices with outdated or unknown data (based on an 8-day threshold) are highlighted.
+// Results are limited to the past 6 hours of telemetry.
+//
+// Source: DeviceTvmInfoGathering table in Microsoft 365 Defender Advanced Hunting
+// Author: Kevin Hilt
+// Last Updated: 2025-08-28
+
+DeviceTvmInfoGathering
+| extend
+    DataRefreshTimestamp = Timestamp,
+    AvModeRaw = tostring(AdditionalFields.AvMode),
+    AvIsSignatureUpToDateRaw = tostring(AdditionalFields.AvIsSignatureUptoDate),
+    AvIsPlatformUpToDateRaw = tostring(AdditionalFields.AvIsPlatformUptodate),
+    AvIsEngineUpToDateRaw = tostring(AdditionalFields.AvIsEngineUptodate),
+    AvSignatureDataRefreshTime = todatetime(AdditionalFields.AvSignatureDataRefreshTime),
+    AvSignaturePublishTime = todatetime(AdditionalFields.AvSignaturePublishTime),
+    AvSignatureVersion = tostring(AdditionalFields.AvSignatureVersion),
+    AvEngineVersion = tostring(AdditionalFields.AvEngineVersion),
+    AvPlatformVersion = tostring(AdditionalFields.AvPlatformVersion)
+| extend
+    AvMode = case(
+        AvModeRaw == "0", "Active",
+        AvModeRaw == "1", "Passive",
+        AvModeRaw == "2", "Disabled",
+        AvModeRaw == "4", "EDR Blocked",
+        AvModeRaw == "5", "PassiveAudit",
+        "Unknown"
+    )
+| extend
+    AvIsSignatureUpToDate = iif(
+        isnull(AvIsSignatureUpToDateRaw) or isnull(AvSignatureDataRefreshTime) or isnull(AvSignaturePublishTime)
+            or (AvIsSignatureUpToDateRaw == "true" and AvSignaturePublishTime < ago(8d)),
+        "Unknown",
+        AvIsSignatureUpToDateRaw
+    ),
+    AvIsEngineUpToDate = iif(
+        isnull(AvIsEngineUpToDateRaw) or isnull(AvSignatureDataRefreshTime) or isnull(AvSignaturePublishTime)
+            or AvSignatureDataRefreshTime < ago(8d) or AvSignaturePublishTime < ago(8d),
+        "Unknown",
+        AvIsEngineUpToDateRaw
+    ),
+    AvIsPlatformUpToDate = iif(
+        isnull(AvIsPlatformUpToDateRaw) or isnull(AvSignatureDataRefreshTime) or isnull(AvSignaturePublishTime)
+            or AvSignatureDataRefreshTime < ago(8d) or AvSignaturePublishTime < ago(8d),
+        "Unknown",
+        AvIsPlatformUpToDateRaw
+    )
+| where DataRefreshTimestamp > ago(6h)
+| project
+    DeviceId,
+    DeviceName,
+    DataRefreshTimestamp,
+    OSPlatform,
+    AvMode,
+    AvSignatureVersion,
+    AvIsSignatureUpToDate,
+    AvEngineVersion,
+    AvIsEngineUpToDate,
+    AvPlatformVersion,
+    AvIsPlatformUpToDate,
+    AvSignaturePublishTime,
+    AvSignatureDataRefreshTime
+| order by DeviceName asc
+| limit 10000
