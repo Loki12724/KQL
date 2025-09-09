@@ -117,3 +117,6 @@ This repository uses a small helper script and GitHub Action to keep the **Query
 ## 📜 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
+<!-- BEGIN_QUERY_INDEX -->
+_No `KQL/` directory found._<!-- END_QUERY_INDEX -->
