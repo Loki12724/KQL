@@ -105,6 +105,15 @@ This repo is primarily a personal hunting library, but contributions are welcome
 
 ---
 
+## 🔄 Automation
+
+This repository uses a small helper script and GitHub Action to keep the **Query Index** in this README up to date automatically.
+
+- **[scripts/generate_readme_index.py](scripts/generate_readme_index.py)**  
+  Scans the `KQL/` folder and rebuilds the markdown list of queries.  
+  Updates the `README.md` between the markers:
+
+---
 ## 📜 License
 
 MIT License — see [LICENSE](LICENSE) for details.
