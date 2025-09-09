@@ -3,6 +3,7 @@ This repository is a curated collection of Kusto Query Language (KQL) queries fo
 They are designed to help with threat hunting, detection, and reporting across Defender data tables.
 ----------------------------------------------------------------------------------------------------------------------------
 📂 Repository Structure
+
 ASR/                               # Attack Surface Reduction queries
 ExploitGuard-NetworkProtection/    # Network Protection / Exploit Guard
 Auth-Logons-Identity/              # NTLM, logons, AD group mods, identity signals
@@ -14,6 +15,7 @@ Utilities/                         # Helpers (e.g., filename search)
 _Unsorted/                         # Staging area for uncategorized queries
 ----------------------------------------------------------------------------------
 📑 Query Index
+
 ASR/
   ASR_BlockedEvents_Detail_7d.kql
   ASR_BlockedEvents_Summary_7d.kql
