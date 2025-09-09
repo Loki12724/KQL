@@ -23,7 +23,7 @@ KQL/
 ---
 
 ## 📑 Query Index
-<!-- BEGIN_QUERY_INDEX -->
+
 ### ASR/
 - [ASR_BlockedEvents_Detail_7d.kql](KQL/ASR/ASR_BlockedEvents_Detail_7d.kql)
 - [ASR_BlockedEvents_Summary_7d.kql](KQL/ASR/ASR_BlockedEvents_Summary_7d.kql)
@@ -54,7 +54,7 @@ KQL/
 
 ### _Unsorted/
 - *(any queries that don’t yet fit into a category)*
-<!-- END_QUERY_INDEX --> 
+
 ---
 
 ## 🚀 Usage
@@ -102,16 +102,6 @@ This repo is primarily a personal hunting library, but contributions are welcome
 1. Fork the repo  
 2. Add or improve queries (using the standard header format)  
 3. Submit a pull request
-
----
-
-## 🔄 Automation
-
-This repository uses a small helper script and GitHub Action to keep the **Query Index** in this README up to date automatically.
-
-- **[scripts/generate_readme_index.py](scripts/generate_readme_index.py)**  
-  Scans the `KQL/` folder and rebuilds the markdown list of queries.  
-  Updates the `README.md` between the markers:
 
 ---
 ## 📜 License
