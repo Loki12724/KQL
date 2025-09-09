@@ -23,7 +23,7 @@ KQL/
 ---
 
 ## 📑 Query Index
-
+<!-- BEGIN_QUERY_INDEX -->
 ### ASR/
 - [ASR_BlockedEvents_Detail_7d.kql](KQL/ASR/ASR_BlockedEvents_Detail_7d.kql)
 - [ASR_BlockedEvents_Summary_7d.kql](KQL/ASR/ASR_BlockedEvents_Summary_7d.kql)
@@ -54,7 +54,7 @@ KQL/
 
 ### _Unsorted/
 - *(any queries that don’t yet fit into a category)*
-
+<!-- END_QUERY_INDEX --> 
 ---
 
 ## 🚀 Usage
