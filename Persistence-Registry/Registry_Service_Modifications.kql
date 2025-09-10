@@ -1,0 +1,14 @@
+// Title: Registry Service Modifications
+// Purpose: Detect registry value sets within the Services registry hive
+// Scope: Windows 10/11, Server 2016+
+// Tables: DeviceRegistryEvents
+// Tunables:
+//   - Scope can be expanded to specific service names or subkeys
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
+
+DeviceRegistryEvents
+| where ActionType == "RegistryValueSet"
+| where RegistryKey contains "Services"
+| project Timestamp, DeviceName, RegistryKey, RegistryValueName, RegistryValueData, AccountName
+| order by Timestamp desc
