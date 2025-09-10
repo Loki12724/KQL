@@ -1,0 +1,13 @@
+// Title: Child Processes Spawned by services.exe
+// Purpose: Detect processes launched by services.exe (potential service abuse or persistence)
+// Scope: Windows 10/11, Server 2016+
+// Tables: DeviceProcessEvents
+// Tunables:
+//   - Consider expanding to include hashes of initiating process
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
+
+DeviceProcessEvents
+| where InitiatingProcessFileName contains "services.exe"
+| project Timestamp, DeviceName, InitiatingProcessFileName, ProcessCommandLine, AccountName, InitiatingProcessSHA1
+| order by Timestamp desc
