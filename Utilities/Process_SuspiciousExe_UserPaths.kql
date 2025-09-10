@@ -1,0 +1,15 @@
+// Title: Suspicious Executables in User/Temp Paths (recent)
+// Purpose: Detect execution of .exe files from Temp, AppData, or Public user directories
+// Scope: Windows 10/11, Server 2016+
+// Tables: DeviceProcessEvents
+// Tunables:
+//   - Time range: adjust `ago()` if needed
+//   - Paths: expand beyond Temp/AppData/Public as required
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
+
+DeviceProcessEvents
+| where FileName endswith ".exe"
+| where FolderPath contains "\\Temp" or FolderPath contains "\\AppData" or FolderPath contains "\\Users\\Public"
+| project Timestamp, DeviceName, FileName, FolderPath, ProcessCommandLine, AccountName
+| order by Timestamp desc
