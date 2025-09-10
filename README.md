@@ -27,6 +27,7 @@ KQL/
 ### ASR/
 - [ASR_BlockedEvents_Detail_7d.kql](KQL/ASR/ASR_BlockedEvents_Detail_7d.kql)
 - [ASR_BlockedEvents_Summary_7d.kql](KQL/ASR/ASR_BlockedEvents_Summary_7d.kql)
+- [ASR_Filename_Search_7d.kql](KQL/ASR/ASR_Filename_Search_7d.kql)
 
 ### ExploitGuard-NetworkProtection/
 - [Network_Protection_Exploit_Guard.kql](KQL/ExploitGuard-NetworkProtection/Network_Protection_Exploit_Guard.kql)
