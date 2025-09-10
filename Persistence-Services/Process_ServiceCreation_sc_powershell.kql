@@ -1,0 +1,15 @@
+// Title: Service Creation via sc.exe or PowerShell
+// Purpose: Identify attempts to create services using sc.exe or PowerShell
+// Scope: Windows 10/11, Server 2016+
+// Tables: DeviceProcessEvents
+// Tunables:
+//   - Adjust process filters (add other tools like cmd.exe)
+//   - Update keyword from "create" if other verbs are relevant
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
+
+DeviceProcessEvents
+| where InitiatingProcessFileName has_any ("sc.exe","powershell.exe")
+| where ProcessCommandLine contains "create"
+| project Timestamp, DeviceName, InitiatingProcessFileName, ProcessCommandLine, AccountName
+| order by Timestamp desc
