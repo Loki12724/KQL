@@ -25,15 +25,15 @@ KQL/
 ## 📑 Query Index
 
 ### ASR/
-- [ASR_BlockedEvents_Detail_7d.kql](KQL/ASR/ASR_BlockedEvents_Detail_7d.kql)
-- [ASR_BlockedEvents_Summary_7d.kql](KQL/ASR/ASR_BlockedEvents_Summary_7d.kql)
-- [ASR_Filename_Search_7d.kql](KQL/ASR/ASR_Filename_Search_7d.kql)
+- [ASR_BlockedEvents_Detail_7d.kql](KQL/ASR/ASR_BlockedEvents_Detail_7d.kql) — Detailed list of ASR block events in the last 7 days.
+- [ASR_BlockedEvents_Summary_7d.kql](KQL/ASR/ASR_BlockedEvents_Summary_7d.kql) — Summarized count of ASR events by category.
+- [ASR_Filename_Search_7d.kql](KQL/ASR/ASR_Filename_Search_7d.kql) — Search ASR events for specific file names.
 
 ### ExploitGuard-NetworkProtection/
-- [Network_Protection_Exploit_Guard.kql](KQL/ExploitGuard-NetworkProtection/Network_Protection_Exploit_Guard.kql)
+- [Network_Protection_Exploit_Guard.kql](KQL/ExploitGuard-NetworkProtection/Network_Protection_Exploit_Guard.kql) — List of Exploit Guard / Network Protection events.
 
 ### Auth-Logons-Identity/
-- [AD_Sensitive_Group_Modifications.kql](KQL/Auth-Logons-Identity/AD_Sensitive_Group_Modifications.kql)
+- [AD_Sensitive_Group_Modifications.kql](KQL/Auth-Logons-Identity/AD_Sensitive_Group_Modifications.kql) — Detect modifications to sensitive AD groups.
 - [NTLM_Successful_Network_Logons.kql](KQL/Auth-Logons-Identity/NTLM_Successful_Network_Logons.kql)
 
 ### Defender-Health-Reports/
