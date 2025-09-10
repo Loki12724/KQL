@@ -34,32 +34,32 @@ KQL/
 
 ### Auth-Logons-Identity/
 - [AD_Sensitive_Group_Modifications.kql](KQL/Auth-Logons-Identity/AD_Sensitive_Group_Modifications.kql) — Detect modifications to sensitive AD groups.
-- [NTLM_Successful_Network_Logons.kql](KQL/Auth-Logons-Identity/NTLM_Successful_Network_Logons.kql)
+- [NTLM_Successful_Network_Logons.kql](KQL/Auth-Logons-Identity/NTLM_Successful_Network_Logons.kql) — Successful NTLM network logon attempts.
 
 ### Defender-Health-Reports/
-- [Defender_AV_Health_Status_6h.kql](KQL/Defender-Health-Reports/Defender_AV_Health_Status_6h.kql)
-- [Endpoint_Agent_Health_Status.kql](KQL/Defender-Health-Reports/Endpoint_Agent_Health_Status.kql)
+- [Defender_AV_Health_Status_6h.kql](KQL/Defender-Health-Reports/Defender_AV_Health_Status_6h.kql) — Unified Defender AV health report (mode, signatures, engine, platform).
+- [Endpoint_Agent_Health_Status.kql](KQL/Defender-Health-Reports/Endpoint_Agent_Health_Status.kql) — Status and health of Defender agents across endpoints.
 
 ### Persistence-Registry/
-- [Registry_New_Changed_Keywords.kql](KQL/Persistence-Registry/Registry_New_Changed_Keywords.kql)
-- [Registry_AttachmentManager_ScanWithAntiVirus_30d.kql](KQL/Persistence-Registry/Registry_AttachmentManager_ScanWithAntiVirus_30d.kql)
-- [Registry_Service_Modifications.kql](KQL/Persistence-Registry/Registry_Service_Modifications.kql)
+- [Registry_New_Changed_Keywords.kql](KQL/Persistence-Registry/Registry_New_Changed_Keywords.kql) — Detect new or modified suspicious registry keys.
+- [Registry_AttachmentManager_ScanWithAntiVirus_30d.kql](KQL/Persistence-Registry/Registry_AttachmentManager_ScanWithAntiVirus_30d.kql) — Monitor changes to the ScanWithAntiVirus flag under Attachment Manager.
+- [Registry_Service_Modifications.kql](KQL/Persistence-Registry/Registry_Service_Modifications.kql) — Detect registry modifications within the Services hive.
 
 ### Persistence-Services/
-- [Process_ServiceCreation_sc_powershell.kql](KQL/Persistence-Services/Process_ServiceCreation_sc_powershell.kql)
-- [Process_ServiceName_CommandLine.kql](KQL/Persistence-Services/Process_ServiceName_CommandLine.kql)
-- [Process_ServicesExe_Children.kql](KQL/Persistence-Services/Process_ServicesExe_Children.kql)
+- [Process_ServiceCreation_sc_powershell.kql](KQL/Persistence-Services/Process_ServiceCreation_sc_powershell.kql) — Detect service creation via sc.exe or PowerShell.
+- [Process_ServiceName_CommandLine.kql](KQL/Persistence-Services/Process_ServiceName_CommandLine.kql) — Detect processes that include ServiceName in their command line.
+- [Process_ServicesExe_Children.kql](KQL/Persistence-Services/Process_ServicesExe_Children.kql) — Detect child processes spawned by services.exe.
 
 ### TVM-KEV-Vulns/
-- [CISA_Top_Vulns_2019_2023.kql](KQL/TVM-KEV-Vulns/CISA_Top_Vulns_2019_2023.kql)
+- [CISA_Top_Vulns_2019_2023.kql](KQL/TVM-KEV-Vulns/CISA_Top_Vulns_2019_2023.kql) — Identify devices exposed to top CISA KEV vulnerabilities.
 
 ### SCCM-Integration/
-- [SCCM_Process_Execution_and_Security_Alert_Join.kql](KQL/SCCM-Integration/SCCM_Process_Execution_and_Security_Alert_Join.kql)
-- [SCCM_Process_AlertTimeAligned_15m_30d.kql](KQL/SCCM-Integration/SCCM_Process_AlertTimeAligned_15m_30d.kql)
+- [SCCM_Process_Execution_and_Security_Alert_Join.kql](KQL/SCCM-Integration/SCCM_Process_Execution_and_Security_Alert_Join.kql) — Join SCCM process execution data with Defender security alerts.
+- [SCCM_Process_AlertTimeAligned_15m_30d.kql](KQL/SCCM-Integration/SCCM_Process_AlertTimeAligned_15m_30d.kql) — Time-align SCCM process and alert data within 15m windows over 30 days.
 
 ### Utilities/
-- [Filename_Search.kql](KQL/Utilities/Filename_Search.kql)
-- [Process_SuspiciousExe_UserPaths.kql](KQL/Utilities/Process_SuspiciousExe_UserPaths.kql)
+- [Filename_Search.kql](KQL/Utilities/Filename_Search.kql) — Search events for specific filenames.
+- [Process_SuspiciousExe_UserPaths.kql](KQL/Utilities/Process_SuspiciousExe_UserPaths.kql) — Detect execution of .exe files from Temp, AppData, or Public directories.
 
 ### _Unsorted/
 - *(any queries that don’t yet fit into a category)*
