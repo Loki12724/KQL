@@ -39,7 +39,7 @@ KQL/
 ### Defender-Health-Reports/
 - [Defender_AV_Health_Status_6h.kql](KQL/Defender-Health-Reports/Defender_AV_Health_Status_6h.kql) — Unified Defender AV health report (mode, signatures, engine, platform).
 - [Endpoint_Agent_Health_Status.kql](KQL/Defender-Health-Reports/Endpoint_Agent_Health_Status.kql) — Status and health of Defender agents across endpoints.
-- [/Defender_SecureConfig_BestPracticeReport.kql](KQL/Defender-Health-Reports//Defender_SecureConfig_BestPracticeReport.kql) — Report on Defender secure configuration compliance vs. best practices (sensor, tamper protection, PUA, AV, cloud).
+- [Defender_SecureConfig_BestPracticeReport.kql](KQL/Defender-Health-Reports/Defender_SecureConfig_BestPracticeReport.kql) — Report on Defender secure configuration compliance vs. best practices (sensor, tamper protection, PUA, AV, cloud).
 
 ### Persistence-Registry/
 - [Registry_New_Changed_Keywords.kql](KQL/Persistence-Registry/Registry_New_Changed_Keywords.kql) — Detect new or modified suspicious registry keys.
