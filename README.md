@@ -43,6 +43,12 @@ KQL/
 ### Persistence-Registry/
 - [Registry_New_Changed_Keywords.kql](KQL/Persistence-Registry/Registry_New_Changed_Keywords.kql)
 - [Registry_AttachmentManager_ScanWithAntiVirus_30d.kql](KQL/Persistence-Registry/Registry_AttachmentManager_ScanWithAntiVirus_30d.kql)
+- [Registry_Service_Modifications.kql](KQL/Persistence-Registry/Registry_Service_Modifications.kql)
+
+### Persistence-Services/
+- [Process_ServiceCreation_sc_powershell.kql](KQL/Persistence-Services/Process_ServiceCreation_sc_powershell.kql)
+- [Process_ServiceName_CommandLine.kql](KQL/Persistence-Services/Process_ServiceName_CommandLine.kql)
+- [Process_ServicesExe_Children.kql](KQL/Persistence-Services/Process_ServicesExe_Children.kql)
 
 ### TVM-KEV-Vulns/
 - [CISA_Top_Vulns_2019_2023.kql](KQL/TVM-KEV-Vulns/CISA_Top_Vulns_2019_2023.kql)
@@ -53,6 +59,7 @@ KQL/
 
 ### Utilities/
 - [Filename_Search.kql](KQL/Utilities/Filename_Search.kql)
+- [Process_SuspiciousExe_UserPaths.kql](KQL/Utilities/Process_SuspiciousExe_UserPaths.kql)
 
 ### _Unsorted/
 - *(any queries that don’t yet fit into a category)*
