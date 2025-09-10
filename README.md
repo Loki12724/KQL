@@ -42,6 +42,7 @@ KQL/
 
 ### Persistence-Registry/
 - [Registry_New_Changed_Keywords.kql](KQL/Persistence-Registry/Registry_New_Changed_Keywords.kql)
+- [Registry_AttachmentManager_ScanWithAntiVirus_30d.kql](KQL/Persistence-Registry/Registry_AttachmentManager_ScanWithAntiVirus_30d.kql)
 
 ### TVM-KEV-Vulns/
 - [CISA_Top_Vulns_2019_2023.kql](KQL/TVM-KEV-Vulns/CISA_Top_Vulns_2019_2023.kql)
