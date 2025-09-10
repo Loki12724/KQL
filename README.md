@@ -83,8 +83,8 @@ Use this header block at the top of each `.kql` file to keep things consistent:
 // Tunables:
 //   - Time range: change `ago(7d)` as needed
 //   - Filters: device groups, account names, file paths, etc.
-// Author: Kevin Hilt (@Lokis-Lab)  |  License: MIT
-// Last Updated: 2025-09-09
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
 ```
 
 ---
