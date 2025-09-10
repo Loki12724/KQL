@@ -37,7 +37,7 @@ KQL/
 - [NTLM_Successful_Network_Logons.kql](KQL/Auth-Logons-Identity/NTLM_Successful_Network_Logons.kql)
 
 ### Defender-Health-Reports/
-- [Defender_AV_Signature_Engine_Report.kql](KQL/Defender-Health-Reports/Defender_AV_Signature_Engine_Report.kql)
+- [Defender_AV_Health_Status_6h.kql](KQL/Defender-Health-Reports/Defender_AV_Health_Status_6h.kql)
 - [Endpoint_Agent_Health_Status.kql](KQL/Defender-Health-Reports/Endpoint_Agent_Health_Status.kql)
 
 ### Persistence-Registry/
