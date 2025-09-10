@@ -1,16 +1,12 @@
-// Title: Defender Antivirus Signature & Engine Currency Report
-// Description:
-// This query identifies Microsoft Defender AV clients with detailed info including:
-//  - Signature (Security Intelligence) version & staleness
-//  - Engine and Platform versions & currency
-//  - AV mode (Active, Passive, Audit, etc.)
-//  - Signature publish & refresh timestamps
-// Devices with outdated or unknown data (based on an 8-day threshold) are highlighted.
-// Results are limited to the past 6 hours of telemetry.
-//
-// Source: DeviceTvmInfoGathering table in Microsoft 365 Defender Advanced Hunting
-// Author: Kevin Hilt
-// Last Updated: 2025-08-28
+// Title: Defender AV Health - Signature, Engine, Platform Status (6h)
+// Purpose: Provide a unified health report on Microsoft Defender AV mode, signature, engine, and platform update status
+// Scope: Windows 10/11, Server 2016+
+// Tables: DeviceTvmInfoGathering
+// Tunables:
+//   - Time range: `ago(6h)` can be adjusted
+//   - Staleness threshold: currently set to 8 days
+// Author: Lokis-Lab  |  License: MIT
+// Last Updated: 2025-09-10
 
 DeviceTvmInfoGathering
 | extend
